@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" type="text/css" href="Ribbon.css">
+    <link rel="stylesheet" type="text/css" href="speech.css">
+
+    <style>
+    table{
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    .mags {
+      color: red;
+    }
+
+    #second {
+      color: green;
+    }
+
+    #first {
+      color: orange;
+    }
+
+    #roundbord {
+      border-radius: 100%
+    }
+
+    .stiched {
+        background: #000000
+      color: #fff;
+      border: 2px dashed #e60000;
+
+      box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+      text-shadow: 1px 1px #a3a3c2;
+      font-weight: normal;
+    }
+    .textshadow {
+      text-shadow: 0 0 32px white;
+      color: 0 0 5px rgba(0,0,0,0.5)
+    }
+    #html {
+      background: #222;
+      color: white;
+      text-align: center;
+    }
+    .blurry {
+      color: rgba(0,0,0,0);
+      text-shadow: 0 0 5px #000;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 class="textshadow"> Totems for Jelani </h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li> The Wolf</li>
+        <li> The Balance</li>
+        <li> The Parent</li>
+        <li> The Student</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h3>Meanings</h3>
+      <p>The wolf represents strength needed to endure struggles in life. The balance is neccessary between all facets of life.The parent is the needed teacher and guidence we all require. The student is a state of mentality that learning never stops and no one can know everything.
+      </p>
+    </div>
+    <div>
+      <h1>CSS Buttons</h1>
+      <button>Default Button</button>
+    <button><a href="https://github.com/JelaniR/CC3GitRepoJR" class="button">Link Button</a></button>
+      <button class="button">Button</button>
+      <button><input type="button" class="button" value="Input Button"></button>
+    </div>
+    <div>
+    <h1 class="blurry">Zebra Striped Table</h1>
+    <p class="blurry"> The nth-child() selector and add a background-color to all even or odd table rows.
+    The th selector is the table header included with pixel size.
+    The td selector is the content within the table.
+    The tr selector refers to table row in the same sense that the p tag works</p>
+    <table>
+      <tr id="first">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Value</th>
+      </tr>
+
+      <tr>
+        <th class="stiched">Jelani</th>
+        <th>Richardson</th>
+        <th id="second">3000
+      </tr>
+
+      <tr>
+        <th>Class</th>
+        <th>Room</th>
+        <th id="second">139</th>
+      </tr>
+
+      <tr class="mags">
+        <th>All</th>
+        <th>Bets</th>
+        <th id="second">0</th>
+      </tr>
+    </div>
+    </table>
+
+    <div class="speech-bubble">
+    <div class="arrow bottom right">
+     Speech Bubble Son!
+  </div>
+
+    <img id="roundbord" src="http://dreamatico.com/data_images/wolf/wolf-5.jpg"
+    alt="Wolf" style="width:500px;height:400px">
+    <div class="box">
+      <div class="ribbon"><span>RIBBON SON!</span></div>
+    </div>
+  </body>
+</html>
