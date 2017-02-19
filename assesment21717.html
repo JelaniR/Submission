@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button onclick="sleepIn()">Sleep In?</button>
+    <script>
+        var sleepIn = function (weekday, vacation) {
+            var weekday = new Date();
+            var wday = weekday.getDay();
+            var vacation = prompt("Are we on vacation?", ["No"]);
+            var vaca2 = vacation.toLowerCase;
+            if (wday = 0) {
+                document.write("Yes!!")
+            } else if (wday = 6) {
+                document.write("Yes!!")
+            } else if (vaca2 = "yes") {
+                document.write("Yes!!")
+            }
+            else { document.write ("Sorry, No.")}
+           
+           
+            }
+    </script>
+
+</body>
+</html>
