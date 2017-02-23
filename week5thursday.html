@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Week5Thursday</title>
+</head>
+
+<body>
+    <!--<button onclick="random()"></button>-->
+    <button onclick="areafunc()">Calculate</button>
+    <div id="area"></div><br />
+    <button onclick="guessin()">Number guess</button>
+    <div id="answer"></div><br />
+    <div id="xmas"></div>
+
+
+    <script>
+
+        function areafunc() {
+            var a = parseInt(prompt("Pick the first side.", "7"));
+            var b = parseInt(prompt("Pick the second side.", "8"));
+            var c = parseInt(prompt("Pick the third side.", "9"));
+            var h = (a + b + c) / 2;
+            var z = Math.sqrt(h * ((h - a) * (h - b) * (h - c)));
+
+            document.getElementById("area").innerHTML =  "The Area is: " + z;
+
+        }
+
+       
+       
+    </script>
+   
+    <script>
+
+
+        function guessin() {
+            let random = Math.floor(Math.random() * 10) + 1;
+            var guess = parseInt(prompt("Guess 1 - 10"));
+            while (random != guess) {
+                guess = parseInt(prompt("Guess 1 - 10"));
+            }
+            document.getElementById("answer").innerHTML = "Yes! The answer is " + random;
+             random = Math.floor(Math.random() * 10) + 1;
+
+        }
+
+    </script>
+    <script>
+        function tillXmas() {
+            let xday = new Date();
+            let yday = xday.getMonth();
+            let zday = xday.getFullYear();
+            let wday = xday.getDay();
+            let sday = new Date(xday.getFullYear(), 11, 25);
+            const conver = (1000 * 60 * 60 * 24);
+
+            document.getElementById("xmas").innerHTML = "<b>There are </b>" + Math.floor((sday.getTime() - xday.getTime())/conver ) + " <b>Days Left Until Christmas</b>";
+
+        }
+        tillXmas();
+    </script>
+</body>
+</html>
