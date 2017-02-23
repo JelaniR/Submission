@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+   
+   
+  <p id="demo"></p>
+  <p id="demo2">Get it to Work</p>
+   
+
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+    <button id="change" onclick="change()">Change It</button>
+        
+    <script>
+        function formatDates(){
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() +1;
+            var yyyy = today.getFullYear();
+            if (mm<10) {
+                mm = "0" + mm 
+            }
+
+            //document.getElementById("dateFormats").innerHTML =  mm + "-" + dd + "-" + yyyy;
+            //document.getElementById("dateFormats").innerHTML = mm + "/" + dd + "/" + yyyy;
+            document.getElementById("dateFormats").innerHTML = dd + "/" + mm + "/" + yyyy;
+        }
+        formatDates();
+
+    </script>
+
+    <!--DAY DISPLAY-->
+
+    <script type="text/javascript">
+        var day;
+        switch (new Date().getDay()) {
+            case 0: day = "Sunday";
+                break;
+            case 1: day = "Monday";
+                break;
+            case 2: day = "Tuesday";
+                break;
+            case 3: day = "Wednesday";
+                break;
+            case 4: day = "Thursday";
+                break;
+            case 5: day = "Friday";
+                break;
+            case 6: day = "Saturday";
+        }
+
+        document.getElementById("demo").innerHTML = "<b>Today is</b>:" + day;
+    </script>
+
+    <!--TIME DISPLAY-->
+    <script>
+        function time() {
+            var ti = new Date();
+            var h = ti.getHours();
+            var m = ti.getMinutes();
+            var s = ti.getSeconds();
+            if (s < 10) {
+                s = "0" + s
+            }
+            if (m < 10) {
+                m = "0"+m
+            }
+            if (h > 12) {
+                h = h - 12 + "PM"
+            }
+            if (h < 12) {
+                h = h + "AM"
+            }
+            if (h = 12) {
+                h = h + "PM"
+            }
+           
+            
+            
+
+            document.getElementById("demo2").innerHTML = "<b>The Current Time is-</b> " + h + ":" + m + "mins:" + s + "seconds";
+        }
+        time();
+    </script>
+    <script>
+        
+            //ENTER TABLE INFO
+            
+        function change() {
+            var x = document.getElementById('myTable').rows;
+            var y = x[0].cells;
+            y[0].innerHTML = prompt("Cell 1,1");
+            var z = x[0].cells;
+            z[1].innerHTML = prompt("Cell 1,2");
+            var v = x[1].cells;
+            v[0].innerHTML = prompt("Cell 2,1");
+            v[1].innerHTML = prompt("Cell 2,2");
+            var w = x[2].cells;
+            w[0].innerHTML = prompt("Cell 3,1");
+            w[1].innerHTML = prompt("Cell 3,2");
+
+        }
+        //function change() {
+        //    var table = document.getElementById("myTable");
+        //    var row = table.insertRow(0);
+        //    var cell1 = row.insertCell(0);
+        //    var cell2 = row.insertCell(1);
+        //    cell1.innerHTML = "Added Cell1";
+        //    cell2.innerHTML = "Added Cell2";
+        //} ADD ROWS
+        
+        
+    </script>
+   
+
+   
+</body>
+</html>
