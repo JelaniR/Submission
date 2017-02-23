@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz Week 5 Q1</title>
+</head>
+<body>
+   
+    <button onclick="sleepIn()">Sleep In?</button>
+    <div id="sleep"></div><br />
+    <button onclick="emojiTrouble()">Check smiles</button>
+    <div id="demo"></div>
+    <script>
+        var emojiTrouble = function smiles(e1Smile, e2Smile) {
+            var e1Smile = prompt("Is Emoji 1 Smiling? yes or no", "yes");
+            var e2Smile = prompt("Is Emoji 2 Smiling? yes or no", "no");
+            var smile1 = e1Smile.toLowerCase;
+            var smile2 = e2Smile.toLowerCase;
+
+
+            if (e1Smile == "yes" && e2Smile == "yes") {
+                 document.getElementById("demo").innerHTML = "You are in Trouble!!";
+            }
+            else if (e1Smile == "no" && e2Smile == "no") {
+                document.getElementById("demo").innerHTML = "You are in Trouble!!";
+            }
+            else {
+                document.getElementById("demo").innerHTML = "You are not in Trouble..";
+            }
+           }
+    </script>
+    <script>
+        var sleepIn = function (weekday, vacation) {
+            var weekday = new Date();
+            var wday = weekday.getDay();
+            var vacation = prompt("Are we on vacation?", ["No"]);
+            var vaca2 = vacation.toLowerCase();
+            if (wday <1) {
+                document.getElementById("sleep").innerHTML = "Yes!! It's Sunday"
+            } else if (wday >5) {
+                document.getElementById("sleep").innerHTML = "Yes!! It's Saturday"
+            } else if (vaca2 == "yes") {
+                document.getElementById("sleep").innerHTML = "Yes!! Vaca Time"
+            }
+            else { document.getElementById("sleep").innerHTML = "Sorry, No." }
+           
+           
+            }
+    </script>
+
+</body>
+</html>
